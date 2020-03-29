@@ -1,3 +1,13 @@
 import React from "react"
 
-export default () => <div>Hello world!</div>
+import Sample from "../components/Sample"
+
+const index = () => {
+  return (
+    <div>
+      <Sample />
+    </div>
+  )
+}
+
+export default index
