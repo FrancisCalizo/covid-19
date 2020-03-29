@@ -1,12 +1,20 @@
-import React from "react"
+import React, { useState, useEffect } from "react"
 import CovidContext from "./covidContext"
 
 export default ({ children }) => {
-  const teamMembersNames = ["John", "Mary", "Jason", "David"]
+  const [covidData, setCovidData] = useState({})
+  const [loading, setLoading] = useState(false)
+  const [currentCountry, setCurrentCountry] = useState(null)
 
-  const [pairs, setPairs] = React.useState(teamMembersNames)
+  useEffect(() => {
+    fetch("https://pomber.github.io/covid19/timeseries.json")
+      .then(response => response.json())
+      .then(data => setCovidData(data))
+  }, [])
 
   return (
-    <CovidContext.Provider value={{ pairs }}>{children}</CovidContext.Provider>
+    <CovidContext.Provider value={{ covidData }}>
+      {children}
+    </CovidContext.Provider>
   )
 }
