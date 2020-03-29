@@ -2,6 +2,8 @@
 
 - useContext with useState (instead of useReducer) - https://dev.to/nazmifeeroz/using-usecontext-and-usestate-hooks-as-a-store-mnm
 
+- TailwindCSS with Gatsby - https://www.youtube.com/watch?v=d0v_ouu5mqU
+
 <!-- AUTO-GENERATED-CONTENT:START (STARTER) -->
 <p align="center">
   <a href="https://www.gatsbyjs.org">
