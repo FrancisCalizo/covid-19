@@ -1,14 +1,12 @@
 import React from "react"
 
 import CovidProvider from "../context/CovidState"
-import Sample from "../components/Sample"
+import Navbar from "../components/Navbar"
 
 const index = () => {
   return (
     <CovidProvider>
-      <div>
-        <Sample />
-      </div>
+      <Navbar />
     </CovidProvider>
   )
 }
