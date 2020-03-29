@@ -3,7 +3,7 @@ import React from "react"
 const Navbar = () => {
   return (
     <nav>
-      <div className="flex justify-between container items-center mx-auto px-8 py-4">
+      <div className="flex justify-between container items-center `mx-auto px-8 py-4">
         <div>The Report | COVID-19</div>
         <div>
           <input
