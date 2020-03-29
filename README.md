@@ -1,3 +1,7 @@
+## Helpful Articles Along the Way
+
+- useContext with useState (instead of useReducer) - https://dev.to/nazmifeeroz/using-usecontext-and-usestate-hooks-as-a-store-mnm
+
 <!-- AUTO-GENERATED-CONTENT:START (STARTER) -->
 <p align="center">
   <a href="https://www.gatsbyjs.org">
