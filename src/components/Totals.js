@@ -9,10 +9,13 @@ const Totals = () => {
     return "Loading..."
   } else {
     return (
-      <div className="bg-gray-800 py-6">
+      <div className="bg-gray-800 py-2">
+        <h1 className="text-gray-400 uppercase text-center text-2xl">
+          Global Totals
+        </h1>
         <div className="flex justify-center flex-wrap md:flex-no-wrap container mx-auto">
           <div className="w-4/5 sm:w-2/5 md:w-1/5 mx-2">
-            <div className="border border-gray-800 rounded bg-gray-700 shadow-xl my-2 py-2 px-4">
+            <div className="border border-gray-800 rounded bg-gray-700 shadow-xl my-2 py-3 px-4">
               <h3 className="md:text-xs lg:text-sm xl:text-base inline-block text-gray-700 bg-blue-400 px-3 py-1 rounded-full">
                 Cases
               </h3>
@@ -22,7 +25,7 @@ const Totals = () => {
             </div>
           </div>
           <div className="w-4/5 sm:w-2/5 md:w-1/5 mx-2">
-            <div className="border border-gray-800 rounded bg-gray-700 shadow-xl my-2 py-2 px-4">
+            <div className="border border-gray-800 rounded bg-gray-700 shadow-xl my-2 py-3 px-4">
               <h3 className="md:text-xs lg:text-sm xl:text-base inline-block text-gray-700 bg-red-400 px-3 py-1 rounded-full">
                 Deaths
               </h3>
@@ -32,7 +35,7 @@ const Totals = () => {
             </div>
           </div>
           <div className="w-4/5 sm:w-2/5 md:w-1/5 mx-2">
-            <div className="border border-gray-800 rounded bg-gray-700 shadow-xl my-2 py-2 px-4">
+            <div className="border border-gray-800 rounded bg-gray-700 shadow-xl my-2 py-3 px-4">
               <h3 className="md:text-xs lg:text-sm xl:text-base inline-block text-gray-700 bg-green-400 px-3 py-1 rounded-full">
                 Recovered
               </h3>
@@ -42,7 +45,7 @@ const Totals = () => {
             </div>
           </div>
           <div className="w-4/5 sm:w-2/5 md:w-1/5 mx-2">
-            <div className="border border-gray-800 rounded bg-gray-700 shadow-xl my-2 py-2 px-4">
+            <div className="border border-gray-800 rounded bg-gray-700 shadow-xl my-2 py-3 px-4">
               <h3 className="md:text-xs lg:text-sm xl:text-base inline-block text-gray-700 bg-yellow-400 px-3 py-1 rounded-full">
                 Last Update
               </h3>

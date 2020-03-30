@@ -10,7 +10,6 @@ const index = () => {
     <CovidProvider>
       <Navbar />
       <Totals />
-      <Toggle />
     </CovidProvider>
   )
 }
