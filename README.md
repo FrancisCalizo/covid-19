@@ -8,6 +8,8 @@
 
 - Date Manipulation - https://www.toptal.com/software/definitive-guide-to-datetime-manipulation
 
+- Check empty Objects - https://coderwall.com/p/_g3x9q/how-to-check-if-javascript-object-is-empty
+
 <!-- AUTO-GENERATED-CONTENT:START (STARTER) -->
 <p align="center">
   <a href="https://www.gatsbyjs.org">

@@ -2,9 +2,9 @@ import React from "react"
 
 const Navbar = () => {
   return (
-    <nav>
+    <nav className="bg-gray-800">
       <div className="flex justify-between container items-center mx-auto px-8 py-4">
-        <div>The Report | COVID-19</div>
+        <div className="text-gray-400">By the Numbers | COVID-19</div>
         <div>
           <input
             className="rounded-full outline-none border-2 px-4 py-1"

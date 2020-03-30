@@ -7,6 +7,7 @@ export default ({ children }) => {
   const [currentCountry, setCurrentCountry] = useState(null)
   const [globalTotals, setGlobalTotals] = useState({})
   const [date, setDate] = useState(new Date())
+  const [search, setSearch] = useState("")
 
   useEffect(() => {
     // Country Data
