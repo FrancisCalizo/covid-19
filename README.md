@@ -12,6 +12,8 @@
 
 - Toggle Switch - https://codepen.io/lhermann/pen/EBGZRZ
 
+- Toggle Switch State - https://upmostly.com/tutorials/build-a-react-switch-toggle-component
+
 <!-- AUTO-GENERATED-CONTENT:START (STARTER) -->
 <p align="center">
   <a href="https://www.gatsbyjs.org">

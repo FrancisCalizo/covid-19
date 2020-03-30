@@ -29,7 +29,15 @@ export default ({ children }) => {
 
   return (
     <CovidContext.Provider
-      value={{ countryData, globalTotals, date, isUsOnly, setIsUsOnly }}
+      value={{
+        countryData,
+        globalTotals,
+        date,
+        isUsOnly,
+        setIsUsOnly,
+        search,
+        setSearch,
+      }}
     >
       {children}
     </CovidContext.Provider>

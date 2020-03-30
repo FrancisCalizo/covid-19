@@ -11,5 +11,5 @@
 
 input:checked ~ .toggle__dot {
   transform: translateX(100%);
-  @apply bg-green-400;
+  /* @apply bg-green-400; */
 }
