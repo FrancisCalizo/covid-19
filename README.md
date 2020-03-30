@@ -14,6 +14,8 @@
 
 - Toggle Switch State - https://upmostly.com/tutorials/build-a-react-switch-toggle-component
 
+- Chartjs Usage - https://www.youtube.com/watch?v=Ly-9VTXJlnA and https://github.com/jerairrest/react-chartjs-2
+
 <!-- AUTO-GENERATED-CONTENT:START (STARTER) -->
 <p align="center">
   <a href="https://www.gatsbyjs.org">

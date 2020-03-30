@@ -3,7 +3,7 @@ import CovidContext from "./covidContext"
 
 export default ({ children }) => {
   const [countryData, setCountryData] = useState({})
-  const [currentCountry, setCurrentCountry] = useState(null)
+  const [currentCountry, setCurrentCountry] = useState("China")
   const [isUsOnly, setIsUsOnly] = useState(false)
   const [globalTotals, setGlobalTotals] = useState({})
   const [date] = useState(new Date())
@@ -21,12 +21,6 @@ export default ({ children }) => {
       .then(data => setGlobalTotals(data))
   }, [])
 
-  // console.log(
-  //   Object.values(countryData).reduce((acc, cur) => {
-  //     return acc + cur[cur.length - 1].deaths
-  //   }, 0)
-  // )
-
   return (
     <CovidContext.Provider
       value={{
@@ -37,6 +31,8 @@ export default ({ children }) => {
         setIsUsOnly,
         search,
         setSearch,
+        currentCountry,
+        setCurrentCountry,
       }}
     >
       {children}
