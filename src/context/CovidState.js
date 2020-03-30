@@ -6,12 +6,15 @@ export default ({ children }) => {
   const [loading, setLoading] = useState(false)
   const [currentCountry, setCurrentCountry] = useState(null)
   const [globalTotals, setGlobalTotals] = useState({})
+  const [date, setDate] = useState(new Date())
 
   useEffect(() => {
+    // Country Data
     fetch("https://pomber.github.io/covid19/timeseries.json")
       .then(response => response.json())
       .then(data => setCountryData(data))
 
+    // Global Data
     fetch("https://coronavirus-19-api.herokuapp.com/all")
       .then(response => response.json())
       .then(data => setGlobalTotals(data))
@@ -24,7 +27,7 @@ export default ({ children }) => {
   // )
 
   return (
-    <CovidContext.Provider value={{ countryData, globalTotals }}>
+    <CovidContext.Provider value={{ countryData, globalTotals, date }}>
       {children}
     </CovidContext.Provider>
   )

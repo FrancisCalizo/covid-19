@@ -1,8 +1,12 @@
 ## Helpful Articles Along the Way
 
+- Totals API - https://github.com/javieraviles/covidAPI
+
 - useContext with useState (instead of useReducer) - https://dev.to/nazmifeeroz/using-usecontext-and-usestate-hooks-as-a-store-mnm
 
 - TailwindCSS with Gatsby - https://www.youtube.com/watch?v=d0v_ouu5mqU
+
+- Date Manipulation - https://www.toptal.com/software/definitive-guide-to-datetime-manipulation
 
 <!-- AUTO-GENERATED-CONTENT:START (STARTER) -->
 <p align="center">
