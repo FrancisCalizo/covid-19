@@ -10,6 +10,8 @@
 
 - Check empty Objects - https://coderwall.com/p/_g3x9q/how-to-check-if-javascript-object-is-empty
 
+- Toggle Switch - https://codepen.io/lhermann/pen/EBGZRZ
+
 <!-- AUTO-GENERATED-CONTENT:START (STARTER) -->
 <p align="center">
   <a href="https://www.gatsbyjs.org">

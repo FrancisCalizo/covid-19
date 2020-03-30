@@ -3,3 +3,13 @@
 @tailwind components;
 
 @tailwind utilities;
+
+.toggle__dot {
+  transition: all 0.3s ease-in-out;
+  @apply bg-white;
+}
+
+input:checked ~ .toggle__dot {
+  transform: translateX(100%);
+  @apply bg-green-400;
+}

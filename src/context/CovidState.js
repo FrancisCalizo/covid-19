@@ -3,10 +3,10 @@ import CovidContext from "./covidContext"
 
 export default ({ children }) => {
   const [countryData, setCountryData] = useState({})
-  const [loading, setLoading] = useState(false)
   const [currentCountry, setCurrentCountry] = useState(null)
+  const [isUsOnly, setIsUsOnly] = useState(false)
   const [globalTotals, setGlobalTotals] = useState({})
-  const [date, setDate] = useState(new Date())
+  const [date] = useState(new Date())
   const [search, setSearch] = useState("")
 
   useEffect(() => {
@@ -28,7 +28,9 @@ export default ({ children }) => {
   // )
 
   return (
-    <CovidContext.Provider value={{ countryData, globalTotals, date }}>
+    <CovidContext.Provider
+      value={{ countryData, globalTotals, date, isUsOnly, setIsUsOnly }}
+    >
       {children}
     </CovidContext.Provider>
   )
