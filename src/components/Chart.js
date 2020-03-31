@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useContext } from "react"
+import React, { useContext, useEffect, useState } from "react"
 import { Line } from "react-chartjs-2"
 
 import CovidContext from "../context/covidContext"
@@ -7,36 +7,49 @@ const Chart = () => {
   const covidContext = useContext(CovidContext)
   const { currentCountry, countryData } = covidContext
 
-  const [cases, setCases] = useState([])
   const [dates, setDates] = useState([])
+  const [confirmed, setConfirmed] = useState([])
+  const [deaths, setDeaths] = useState([])
+  const [recovered, setRecovered] = useState([])
 
   useEffect(() => {
-    // if (Object.keys(countryData).length) {
-    if (countryData[currentCountry] !== undefined) {
+    if (countryData[currentCountry]) {
       setDates(countryData[currentCountry].map(data => data.date))
-      console.log(countryData[currentCountry])
+      setConfirmed(countryData[currentCountry].map(data => data.confirmed))
+      setDeaths(countryData[currentCountry].map(data => data.deaths))
+      setRecovered(countryData[currentCountry].map(data => data.recovered))
     }
-  }, [])
-
-  const data = {
-    labels: dates,
-    datasets: [
-      {
-        label: "Population",
-        data: cases,
-        // backgroundColor: "#4a5568",
-        borderColor: "#f00",
-        label: "This is a label",
-        pointBackgroundColor: "green",
-      },
-    ],
-  }
-
-  console.log(countryData[currentCountry])
+  }, [countryData, currentCountry])
 
   return (
-    <div>
-      <Line data={data} options={{ maintainAspectRatio: false }} />
+    <div className="lg:w-3/4 xl:w-2/3 mx-auto">
+      <Line
+        data={{
+          labels: dates,
+          datasets: [
+            {
+              label: "Confirmed Cases",
+              data: confirmed,
+              backgroundColor: "transparent",
+              borderColor: "#63b3ed",
+            },
+            {
+              label: "Deaths",
+              data: deaths,
+              backgroundColor: "transparent",
+              borderColor: "#fc8181",
+            },
+            {
+              label: "Recovered",
+              data: recovered,
+              backgroundColor: "transparent",
+              borderColor: "#68d391",
+            },
+          ],
+        }}
+        height={500}
+        options={{ maintainAspectRatio: false }}
+      />
     </div>
   )
 }

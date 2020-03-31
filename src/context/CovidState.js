@@ -3,7 +3,7 @@ import CovidContext from "./covidContext"
 
 export default ({ children }) => {
   const [countryData, setCountryData] = useState({})
-  const [currentCountry, setCurrentCountry] = useState("China")
+  const [currentCountry, setCurrentCountry] = useState("Italy")
   const [isUsOnly, setIsUsOnly] = useState(false)
   const [globalTotals, setGlobalTotals] = useState({})
   const [date] = useState(new Date())

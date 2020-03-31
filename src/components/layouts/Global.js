@@ -9,7 +9,7 @@ const Global = () => {
 
   return (
     <div className="container my-8 mx-auto px-8 ">
-      <h1 className="text-center">Covid-19 Stats for {currentCountry}</h1>
+      <h1 className="text-6xl text-center mb-4">{currentCountry}</h1>
       <Chart />
     </div>
   )
