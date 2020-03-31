@@ -42,7 +42,7 @@ export default ({ children }) => {
       }
     )
       .then(response => response.json())
-      .then(data => console.log(data))
+      .then(data => null)
       .catch(err => console.error(err))
   }, [])
 
@@ -68,6 +68,7 @@ export default ({ children }) => {
         setIsUsOnly,
         currentCountry,
         setCurrentCountry,
+        countryDataToday,
       }}
     >
       {children}
