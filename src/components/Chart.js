@@ -98,8 +98,11 @@ const Chart = () => {
               {
                 ticks: {
                   fontColor: "white",
+                  callback: function(tick, index, ticks) {
+                    return index % 3 === 0 ? tick.toLocaleString() : null
+                  },
                 },
-                // type: "logarithmic",
+                type: "logarithmic",
               },
             ],
             xAxes: [
