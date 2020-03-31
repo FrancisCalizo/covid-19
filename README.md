@@ -22,6 +22,8 @@
 
 - Checkbox State - https://reactjs.org/docs/forms.html
 
+- Data Above Bar Chart - https://stackoverflow.com/questions/54558736/chart-js-display-data-value-on-the-top-of-the-bar
+
 <!-- AUTO-GENERATED-CONTENT:START (STARTER) -->
 <p align="center">
   <a href="https://www.gatsbyjs.org">

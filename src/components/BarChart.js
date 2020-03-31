@@ -36,7 +36,6 @@ const BarChart = () => {
                 "rgba(241, 129, 129,0.9)",
                 "rgba(104, 211, 144,0.9)",
               ],
-              borderWidth: 1,
               hoverBackgroundColor: [
                 "rgba(99, 179, 237,0.8)",
                 "rgba(241, 129, 129,0.8)",
@@ -80,6 +79,62 @@ const BarChart = () => {
                 },
               },
             ],
+          },
+          animation: {
+            duration: 500,
+            easing: "easeInQuad",
+            onComplete: function() {
+              let chartInstance = this.chart,
+                ctx = chartInstance.ctx
+
+              // ctx.font = Chart.helpers.fontString(
+              //   Chart.defaults.global.defaultFontSize,
+              //   Chart.defaults.global.defaultFontStyle,
+              //   Chart.defaults.global.defaultFontFamily
+              // )
+
+              ctx.textAlign = "center"
+              ctx.textBaseline = "bottom"
+
+              this.data.datasets.forEach(function(dataset, i) {
+                let meta = chartInstance.controller.getDatasetMeta(i)
+                meta.data.forEach(function(bar, index) {
+                  if (dataset.data[index] > 0) {
+                    let data = dataset.data[index]
+                    ctx.fillText(data, bar._model.x, bar._model.y)
+                  } else {
+                    let data = 0
+                    ctx.fillText(data, bar._model.x, bar._model.y)
+                  }
+                })
+              })
+            },
+            onProgress: function() {
+              let chartInstance = this.chart,
+                ctx = chartInstance.ctx
+
+              // ctx.font = Chart.helpers.fontString(
+              //   Chart.defaults.global.defaultFontSize,
+              //   Chart.defaults.global.defaultFontStyle,
+              //   Chart.defaults.global.defaultFontFamily
+              // )
+
+              ctx.textAlign = "center"
+              ctx.textBaseline = "bottom"
+
+              this.data.datasets.forEach(function(dataset, i) {
+                let meta = chartInstance.controller.getDatasetMeta(i)
+                meta.data.forEach(function(bar, index) {
+                  if (dataset.data[index] > 0) {
+                    let data = dataset.data[index]
+                    ctx.fillText(data, bar._model.x, bar._model.y)
+                  } else {
+                    let data = 0
+                    ctx.fillText(data, bar._model.x, bar._model.y)
+                  }
+                })
+              })
+            },
           },
         }}
       />
