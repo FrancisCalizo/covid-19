@@ -44,7 +44,9 @@ const LineChart = () => {
               <path d="M0 11l2-2 5 5L18 3l2 2L7 18z" />
             </svg>
           </div>
-          <div className="select-none text-white">Use Logarithmic Scale</div>
+          <div className="select-none text-white cursor-pointer">
+            Use Logarithmic Scale
+          </div>
         </label>
       </div>
       <Line

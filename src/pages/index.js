@@ -10,6 +10,9 @@ const index = () => {
     <CovidProvider>
       <Navbar />
       <GlobalTotals />
+      <div className="container px-8">
+        <div className="border-b-2 border-gray-300 my-6" />
+      </div>
       <Global />
     </CovidProvider>
   )
