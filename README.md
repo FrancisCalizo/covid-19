@@ -24,6 +24,8 @@
 
 - Data Above Bar Chart - https://stackoverflow.com/questions/54558736/chart-js-display-data-value-on-the-top-of-the-bar
 
+- Canvas Work - https://www.w3schools.com/graphics/canvas_text.asp
+
 <!-- AUTO-GENERATED-CONTENT:START (STARTER) -->
 <p align="center">
   <a href="https://www.gatsbyjs.org">

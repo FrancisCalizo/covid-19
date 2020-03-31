@@ -87,12 +87,10 @@ const BarChart = () => {
               let chartInstance = this.chart,
                 ctx = chartInstance.ctx
 
-              // ctx.font = Chart.helpers.fontString(
-              //   Chart.defaults.global.defaultFontSize,
-              //   Chart.defaults.global.defaultFontStyle,
-              //   Chart.defaults.global.defaultFontFamily
-              // )
-
+              ctx.font = "1rem Arial"
+              ctx.fillStyle = "white"
+              ctx.textAlign = "center"
+              ctx.textBaseline = "bottom"
               ctx.textAlign = "center"
               ctx.textBaseline = "bottom"
 
@@ -113,12 +111,8 @@ const BarChart = () => {
               let chartInstance = this.chart,
                 ctx = chartInstance.ctx
 
-              // ctx.font = Chart.helpers.fontString(
-              //   Chart.defaults.global.defaultFontSize,
-              //   Chart.defaults.global.defaultFontStyle,
-              //   Chart.defaults.global.defaultFontFamily
-              // )
-
+              ctx.font = "1rem Arial"
+              ctx.fillStyle = "white"
               ctx.textAlign = "center"
               ctx.textBaseline = "bottom"
 
