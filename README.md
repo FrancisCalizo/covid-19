@@ -16,6 +16,8 @@
 
 - Chartjs Usage - https://www.youtube.com/watch?v=Ly-9VTXJlnA and https://github.com/jerairrest/react-chartjs-2
 
+- Label Font Color for Chart JS in React - https://www.chartjs.org/docs/latest/axes/styling.html and https://stackoverflow.com/questions/37292423/chart-js-label-color
+
 <!-- AUTO-GENERATED-CONTENT:START (STARTER) -->
 <p align="center">
   <a href="https://www.gatsbyjs.org">

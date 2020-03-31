@@ -22,8 +22,8 @@ const Chart = () => {
   }, [countryData, currentCountry])
 
   return (
-    <div className="lg:w-3/4 xl:w-2/3 mx-auto bg-gray-700">
-      <Line
+    <div className="lg:w-3/4 xl:w-2/3 mx-auto bg-gray-700 rounded">
+      <Line className='text-white'
         data={{
           labels: dates,
           datasets: [
@@ -32,23 +32,81 @@ const Chart = () => {
               data: confirmed,
               backgroundColor: "transparent",
               borderColor: "#63b3ed",
+              lineTension: 0.1,
+              fill: false,
+              pointBorderColor: '#63b3ed',
+              pointBackgroundColor: '#fff',
+              pointBorderWidth: 1,
+              pointHoverRadius: 5,
+              pointHoverBackgroundColor: '#63b3ed',
+              pointHoverBorderColor: 'rgba(220,220,220,1)',
+              pointHoverBorderWidth: 2,
+              pointRadius: 1,
+              pointHitRadius: 10
             },
             {
               label: "Deaths",
               data: deaths,
               backgroundColor: "transparent",
               borderColor: "#fc8181",
+              lineTension: 0.1,
+              fill: false,
+              pointBorderColor: '#fc8181',
+              pointBackgroundColor: '#fff',
+              pointBorderWidth: 1,
+              pointHoverRadius: 5,
+              pointHoverBackgroundColor: '#fc8181',
+              pointHoverBorderColor: 'rgba(220,220,220,1)',
+              pointHoverBorderWidth: 2,
+              pointRadius: 1,
+              pointHitRadius: 10
             },
             {
               label: "Recovered",
               data: recovered,
               backgroundColor: "transparent",
               borderColor: "#68d391",
+              lineTension: 0.1,
+              fill: false,
+              pointBorderColor: '#68d391',
+              pointBackgroundColor: '#fff',
+              pointBorderWidth: 1,
+              pointHoverRadius: 5,
+              pointHoverBackgroundColor: '#68d391',
+              pointHoverBorderColor: 'rgba(220,220,220,1)',
+              pointHoverBorderWidth: 2,
+              pointRadius: 1,
+              pointHitRadius: 10
             },
           ],
         }}
+        legend={{
+          display: true,
+          position: 'top',
+          fullWidth: true,
+          reverse: false,
+          labels: {
+            fontColor: '#fff'
+          }}}
         height={500}
-        options={{ maintainAspectRatio: false }}
+        options ={{
+          maintainAspectRatio: false,
+          scales: {
+            yAxes: [{
+                ticks: {
+                    fontColor: "white",
+                }
+            }],
+            xAxes: [{
+                ticks: {
+                    fontColor: "white",
+                }
+            }]
+          },
+          layout: {
+            padding: 30
+          }
+        }}
       />
     </div>
   )
