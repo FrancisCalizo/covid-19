@@ -3,11 +3,11 @@ import CovidContext from "./covidContext"
 
 export default ({ children }) => {
   const [countryData, setCountryData] = useState({})
-  const [currentCountry, setCurrentCountry] = useState("Italy")
+  const [countries, setCountries] = useState([])
+  const [currentCountry, setCurrentCountry] = useState('Afghanistan')
   const [isUsOnly, setIsUsOnly] = useState(false)
   const [globalTotals, setGlobalTotals] = useState({})
   const [date] = useState(new Date())
-  const [search, setSearch] = useState("")
 
   useEffect(() => {
     // Country Data
@@ -19,6 +19,11 @@ export default ({ children }) => {
     fetch("https://coronavirus-19-api.herokuapp.com/all")
       .then(response => response.json())
       .then(data => setGlobalTotals(data))
+
+    // Countries
+    fetch("https://pomber.github.io/covid19/timeseries.json")
+      .then(response => response.json())
+      .then(data => setCountries(Object.keys(data)))
   }, [])
 
   return (
@@ -26,11 +31,10 @@ export default ({ children }) => {
       value={{
         countryData,
         globalTotals,
+        countries,
         date,
         isUsOnly,
         setIsUsOnly,
-        search,
-        setSearch,
         currentCountry,
         setCurrentCountry,
       }}
