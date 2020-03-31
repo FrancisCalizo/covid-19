@@ -20,6 +20,8 @@
 
 - Logarithmic Scale - https://stackoverflow.com/questions/30307801/how-to-assign-a-logarithmic-scale-to-y-axis-in-chart-js and https://github.com/chartjs/Chart.js/issues/3121
 
+- Checkbox State - https://reactjs.org/docs/forms.html
+
 <!-- AUTO-GENERATED-CONTENT:START (STARTER) -->
 <p align="center">
   <a href="https://www.gatsbyjs.org">

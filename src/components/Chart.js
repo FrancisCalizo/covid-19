@@ -22,8 +22,31 @@ const Chart = () => {
     }
   }, [countryData, currentCountry])
 
+  const handleChange = e => {
+    setIsLogarithmic(e.target.checked)
+  }
+
   return (
     <div className="lg:w-3/4 xl:w-2/3 mx-auto bg-gray-700 rounded">
+      <div className="flex justify-center py-4">
+        <label className="inline-block flex justify-start items-start">
+          <div className="bg-white border-2 rounded border-gray-400 w-6 h-6 flex flex-shrink-0 justify-center items-center mr-2 focus-within:border-blue-500">
+            <input
+              type="checkbox"
+              className="opacity-0 absolute"
+              onChange={handleChange}
+              checked={isLogarithmic}
+            />
+            <svg
+              className="fill-current hidden w-4 h-4 text-green-500 pointer-events-none"
+              viewBox="0 0 20 20"
+            >
+              <path d="M0 11l2-2 5 5L18 3l2 2L7 18z" />
+            </svg>
+          </div>
+          <div className="select-none text-white">Use Logarithmic Scale</div>
+        </label>
+      </div>
       <Line
         className="text-white"
         data={{
@@ -91,9 +114,9 @@ const Chart = () => {
             fontColor: "#fff",
           },
         }}
-        height={500}
         options={{
-          maintainAspectRatio: false,
+          aspectRatio: 0.5,
+          maintainAspectRatio: true,
           scales: {
             yAxes: [
               {
@@ -119,7 +142,12 @@ const Chart = () => {
             ],
           },
           layout: {
-            padding: 30,
+            padding: {
+              top: 0,
+              bottom: 30,
+              left: 30,
+              right: 30,
+            },
           },
         }}
       />
