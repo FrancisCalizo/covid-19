@@ -10,7 +10,7 @@ const Totals = () => {
   } else {
     return (
       <div className="bg-gray-800 py-2">
-        <h1 className="text-gray-400 uppercase text-center text-2xl">
+        <h1 className="text-white text-center text-2xl">
           Global Totals
         </h1>
         <div className="flex justify-center flex-wrap md:flex-no-wrap container mx-auto">

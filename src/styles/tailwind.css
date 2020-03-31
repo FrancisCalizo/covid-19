@@ -4,6 +4,10 @@
 
 @tailwind utilities;
 
+body {
+  @apply bg-gray-800;
+}
+
 .toggle__dot {
   transition: all 0.3s ease-in-out;
   @apply bg-white;
@@ -14,8 +18,3 @@ input:checked ~ .toggle__dot {
   /* @apply bg-green-400; */
 }
 
-.select-arrow {
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-}

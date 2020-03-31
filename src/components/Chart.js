@@ -22,7 +22,7 @@ const Chart = () => {
   }, [countryData, currentCountry])
 
   return (
-    <div className="lg:w-3/4 xl:w-2/3 mx-auto">
+    <div className="lg:w-3/4 xl:w-2/3 mx-auto bg-gray-700">
       <Line
         data={{
           labels: dates,

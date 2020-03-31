@@ -7,8 +7,7 @@ const Toggle = () => {
   const { isUsOnly, setIsUsOnly } = covidContext
 
   return (
-    <div className="my-4">
-      <h3 className="text-center text-2xl">Data Location</h3>
+    <div>
       <div className="flex items-center justify-center w-full">
         <label htmlFor="toggle" className="flex items-center cursor-pointer">
           <div className="relative">
