@@ -1,7 +1,8 @@
 import React, { useContext } from "react"
 
 import CovidContext from "../../context/covidContext"
-import Chart from "../Chart"
+import LineChart from "../LineChart"
+import CountryTotals from "../CountryTotals"
 
 const Global = () => {
   const covidContext = useContext(CovidContext)
@@ -27,7 +28,8 @@ const Global = () => {
           </option>
         ))}
       </select>
-      <Chart />
+      <CountryTotals />
+      <LineChart />
     </div>
   )
 }

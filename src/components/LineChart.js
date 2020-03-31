@@ -3,7 +3,7 @@ import { Line } from "react-chartjs-2"
 
 import CovidContext from "../context/covidContext"
 
-const Chart = () => {
+const LineChart = () => {
   const covidContext = useContext(CovidContext)
   const { currentCountry, countryData } = covidContext
 
@@ -155,4 +155,4 @@ const Chart = () => {
   )
 }
 
-export default Chart
+export default LineChart
