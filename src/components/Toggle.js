@@ -8,7 +8,7 @@ const Toggle = () => {
 
   return (
     <div>
-      <div className="flex items-center justify-center w-full">
+      <div className="flex items-center justify-end w-full">
         <label htmlFor="toggle" className="flex items-center cursor-pointer">
           <div className="relative">
             <input
