@@ -11,6 +11,7 @@ const Chart = () => {
   const [confirmed, setConfirmed] = useState([])
   const [deaths, setDeaths] = useState([])
   const [recovered, setRecovered] = useState([])
+  const [isLogarithmic, setIsLogarithmic] = useState(true)
 
   useEffect(() => {
     if (countryData[currentCountry]) {
@@ -98,11 +99,15 @@ const Chart = () => {
               {
                 ticks: {
                   fontColor: "white",
-                  callback: function(tick, index, ticks) {
-                    return index % 3 === 0 ? tick.toLocaleString() : null
+                  callback: function(tick, index) {
+                    if (isLogarithmic) {
+                      return index % 3 === 0 ? tick.toLocaleString() : null
+                    } else {
+                      return tick
+                    }
                   },
                 },
-                type: "logarithmic",
+                type: isLogarithmic ? "logarithmic" : "linear",
               },
             ],
             xAxes: [

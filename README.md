@@ -18,6 +18,8 @@
 
 - Label Font Color for Chart JS in React - https://www.chartjs.org/docs/latest/axes/styling.html and https://stackoverflow.com/questions/37292423/chart-js-label-color
 
+- Logarithmic Scale - https://stackoverflow.com/questions/30307801/how-to-assign-a-logarithmic-scale-to-y-axis-in-chart-js and https://github.com/chartjs/Chart.js/issues/3121
+
 <!-- AUTO-GENERATED-CONTENT:START (STARTER) -->
 <p align="center">
   <a href="https://www.gatsbyjs.org">
