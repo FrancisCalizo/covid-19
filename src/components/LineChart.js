@@ -48,7 +48,6 @@ const LineChart = () => {
         </label>
       </div>
       <Line
-        className="text-white"
         data={{
           labels: dates,
           datasets: [
