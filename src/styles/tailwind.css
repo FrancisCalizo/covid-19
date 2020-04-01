@@ -8,10 +8,23 @@ body {
   @apply bg-gray-800;
 }
 
+/* Navbar */
+.nav-transition {
+  transition: padding 500ms ease-in, opacity 100ms ease-in,
+    background-color 100ms ease-in 300ms, color 100ms ease-in 300ms,
+    border 100ms ease-in 300ms;
+}
+
 /* Toggle Button */
 .toggle__dot {
   transition: all 0.3s ease-in-out;
   @apply bg-white;
+}
+
+/* Global Totals */
+.totals-transition,
+.charts-transition {
+  transition: opacity 600ms ease-in;
 }
 
 input:checked ~ .toggle__dot {
@@ -22,10 +35,4 @@ input:checked ~ .toggle__dot {
 /* Logarithmic Checkbox */
 input:checked + svg {
   display: block;
-}
-
-.nav-transition {
-  transition: padding 500ms ease-in, opacity 100ms ease-in,
-    background-color 100ms ease-in 300ms, color 100ms ease-in 300ms,
-    border 100ms ease-in 300ms;
 }
