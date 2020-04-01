@@ -27,7 +27,7 @@ const LineChart = () => {
   }
 
   return (
-    <div className="lg:w-3/4 xl:w-2/3 mx-auto bg-gray-700 rounded">
+    <div className="lg:w-3/4 xl:w-2/3 mx-auto bg-gray-700 rounded border-gray-600 border shadow-2xl">
       <h2 className="text-xl text-gray-200 pt-4 font-bold text-center">
         Infection History for {currentCountry}
       </h2>

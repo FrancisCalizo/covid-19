@@ -9,7 +9,7 @@ const Toggle = () => {
   return (
     <div>
       <div className="flex items-center justify-end w-full">
-        <label htmlFor="toggle" className="flex items-center cursor-pointer">
+        <label htmlFor="toggle" className="flex items-center cursor-pointer ">
           <div className="relative">
             <input
               id="toggle"
@@ -18,7 +18,7 @@ const Toggle = () => {
               checked={isUsOnly}
               onChange={() => setIsUsOnly(!isUsOnly)}
             />
-            <div className="flex justify-around items-center toggle__line w-24 h-8 bg-gray-700 rounded-full shadow-inner ">
+            <div className="flex justify-around items-center toggle__line w-24 h-8 bg-gray-700 rounded-full shadow-inner border border-teal-400 shadow-2xl">
               <div className="text-sm text-gray-300">USA</div>
               <div className="text-sm text-gray-300">Global</div>
             </div>

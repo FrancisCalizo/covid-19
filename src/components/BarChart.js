@@ -20,7 +20,7 @@ const BarChart = () => {
   }, [countryDataToday, currentCountry])
 
   return (
-    <div className="lg:w-3/4 xl:w-2/3 mx-auto bg-gray-700 rounded my-10">
+    <div className="lg:w-3/4 xl:w-2/3 mx-auto bg-gray-700 rounded my-10 border-gray-600 border shadow-2xl">
       <h2 className="text-xl text-gray-200 pt-4 font-bold text-center">
         Today's Statistics for {currentCountry}
       </h2>
@@ -50,7 +50,7 @@ const BarChart = () => {
                 "rgba(104, 211, 144, 1)",
               ],
               data: [confirmed, deaths, recovered],
-              borderWidth: 2,
+              borderWidth: 3,
               barThickness: "flex",
             },
           ],
@@ -79,6 +79,7 @@ const BarChart = () => {
               {
                 ticks: {
                   fontColor: "white",
+                  fontSize: 15,
                 },
               },
             ],

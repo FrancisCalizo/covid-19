@@ -26,7 +26,12 @@ const Navbar = () => {
             fixed={data.sickImage.childImageSharp.fixed}
             alt={data.sickImage.childImageSharp.fixed.originalName}
           />
-          <h1 className="text-xl ml-1">By the Numbers | COVID-19</h1>
+          <h1 className="text-sm md:text-base lg:text-xl ml-1">
+            STATS |{" "}
+            <span className="bg-teal-800 py-1 px-3 rounded-full border border-teal-400 shadow-2xl text-white">
+              COVID-19
+            </span>
+          </h1>
         </div>
         <div>
           <div className="inline-block relative w-48">
