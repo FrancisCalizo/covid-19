@@ -10,8 +10,8 @@ const index = () => {
     <CovidProvider>
       <Navbar />
       <GlobalTotals />
-      <div className="container px-8">
-        <div className="border-b-2 border-gray-300 my-6" />
+      <div className="flex container px-8 mx-auto">
+        <div className="w-full border-b-2 border-gray-300 my-6"></div>
       </div>
       <Global />
     </CovidProvider>

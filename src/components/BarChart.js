@@ -7,10 +7,10 @@ const BarChart = () => {
   const covidContext = useContext(CovidContext)
   const { countryDataToday, currentCountry } = covidContext
 
-  const [date, setDate] = useState(null)
-  const [confirmed, setConfirmed] = useState(null)
-  const [deaths, setDeaths] = useState(null)
-  const [recovered, setRecovered] = useState(null)
+  const [date, setDate] = useState(new Date())
+  const [confirmed, setConfirmed] = useState(0)
+  const [deaths, setDeaths] = useState(0)
+  const [recovered, setRecovered] = useState(0)
 
   useEffect(() => {
     setDate(countryDataToday.date)
@@ -21,7 +21,7 @@ const BarChart = () => {
 
   return (
     <div className="lg:w-3/4 xl:w-2/3 mx-auto bg-gray-700 rounded my-10">
-      <h2 className="text-xl text-gray-200 ml-8 py-4 font-bold text-center">
+      <h2 className="text-xl text-gray-200  py-4 font-bold text-center">
         Today's Statistics for {currentCountry}
       </h2>
       <Bar
@@ -102,7 +102,11 @@ const BarChart = () => {
                 meta.data.forEach(function(bar, index) {
                   if (dataset.data[index] > 0) {
                     let data = dataset.data[index]
-                    ctx.fillText(data, bar._model.x, bar._model.y)
+                    ctx.fillText(
+                      data.toLocaleString(),
+                      bar._model.x,
+                      bar._model.y
+                    )
                   } else {
                     let data = 0
                     ctx.fillText(data, bar._model.x, bar._model.y)
@@ -124,7 +128,11 @@ const BarChart = () => {
                 meta.data.forEach(function(bar, index) {
                   if (dataset.data[index] > 0) {
                     let data = dataset.data[index]
-                    ctx.fillText(data, bar._model.x, bar._model.y)
+                    ctx.fillText(
+                      data.toLocaleString(),
+                      bar._model.x,
+                      bar._model.y
+                    )
                   } else {
                     let data = 0
                     ctx.fillText(data, bar._model.x, bar._model.y)

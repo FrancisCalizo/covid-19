@@ -28,6 +28,9 @@ const LineChart = () => {
 
   return (
     <div className="lg:w-3/4 xl:w-2/3 mx-auto bg-gray-700 rounded">
+      <h2 className="text-xl text-gray-200 pt-4 font-bold text-center">
+        Infection History for {currentCountry}
+      </h2>
       <div className="flex justify-center py-4">
         <label className="inline-block flex justify-start items-start">
           <div className="bg-white border-2 rounded border-gray-400 w-6 h-6 flex flex-shrink-0 justify-center items-center mr-2 focus-within:border-blue-500">
