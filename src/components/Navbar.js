@@ -7,7 +7,7 @@ import Toggle from "./Toggle"
 const Navbar = () => {
   const data = useStaticQuery(graphql`
     query sickImageQuery {
-      sickImage: file(relativePath: { eq: "sick.webp" }) {
+      sickImage: file(relativePath: { eq: "mask.png" }) {
         childImageSharp {
           fixed(quality: 100, width: 50) {
             ...GatsbyImageSharpFixed

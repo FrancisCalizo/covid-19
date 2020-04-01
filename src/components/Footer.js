@@ -27,7 +27,7 @@ const Footer = () => {
           </a>{" "}
           |{" "}
           <a
-            href="https://github.com/thomas-alrek/covid-19-stats"
+            href="https://github.com/pomber/covid19"
             target="_blank"
             rel="noopener noreferrer"
             className="hover:underline text-teal-400 font-bold"
