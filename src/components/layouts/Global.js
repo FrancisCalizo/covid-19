@@ -16,10 +16,10 @@ const Global = () => {
 
   return (
     <div className="container my-8 mx-auto px-8 bg-gray-800 h-24">
-      <h1 className="text-2xl text-center text-white">Statistics By Country</h1>
+      <h1 className="text-3xl text-center text-white">Statistics By Country</h1>
       <select
         className="h-12 mb-4 mt-3 text-center text-lg block mx-auto w-40 text-gray-300 bg-gray-700 border border-gray-800 pl-2 hover:border-gray-500 rounded
-        shadow leading-tight focus:outline-none focus:shadow-outline"
+        shadow leading-tight focus:outline-none focus:shadow-outline cursor-pointer"
         onChange={handleChange}
       >
         {countries.map(country => (
