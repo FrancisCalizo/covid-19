@@ -1,4 +1,6 @@
 import React, { useContext } from "react"
+import CountUp from "react-countup"
+
 import CovidContext from "../context/covidContext"
 
 const GlobalTotals = () => {
@@ -18,7 +20,12 @@ const GlobalTotals = () => {
                 Cases
               </h3>
               <h3 className="text-3xl md:text-xl lg:text-2xl xl:text-3xl text-right border-b-4 text-white border-blue-400 pb-4 py-2">
-                {`${globalTotals.cases.toLocaleString()}`}
+                {/* {`${globalTotals.cases.toLocaleString()}`} */}
+                <CountUp
+                  delay={0.1}
+                  separator=","
+                  end={`${globalTotals.cases}`}
+                />
               </h3>
             </div>
           </div>
@@ -28,7 +35,12 @@ const GlobalTotals = () => {
                 Deaths
               </h3>
               <h3 className="text-3xl md:text-xl lg:text-2xl xl:text-3xl text-right border-b-4 text-white border-red-400 pb-4 py-2">
-                {`${globalTotals.deaths.toLocaleString()}`}
+                {/* {`${globalTotals.deaths.toLocaleString()}`} */}
+                <CountUp
+                  delay={0.1}
+                  separator=","
+                  end={`${globalTotals.deaths}`}
+                />
               </h3>
             </div>
           </div>
@@ -38,7 +50,12 @@ const GlobalTotals = () => {
                 Recovered
               </h3>
               <h3 className="text-3xl md:text-xl lg:text-2xl xl:text-3xl text-right border-b-4 text-white border-green-400 pb-4 py-2">
-                {`${globalTotals.recovered.toLocaleString()}`}
+                {/* {`${globalTotals.recovered.toLocaleString()}`} */}
+                <CountUp
+                  delay={0.1}
+                  separator=","
+                  end={`${globalTotals.recovered}`}
+                />
               </h3>
             </div>
           </div>

@@ -21,7 +21,7 @@ const BarChart = () => {
 
   return (
     <div className="lg:w-3/4 xl:w-2/3 mx-auto bg-gray-700 rounded my-10">
-      <h2 className="text-xl text-gray-200  py-4 font-bold text-center">
+      <h2 className="text-xl text-gray-200 pt-4 font-bold text-center">
         Today's Statistics for {currentCountry}
       </h2>
       <Bar
@@ -61,7 +61,7 @@ const BarChart = () => {
           maintainAspectRatio: true,
           layout: {
             padding: {
-              top: 0,
+              top: 30,
               bottom: 30,
               left: 30,
               right: 30,
