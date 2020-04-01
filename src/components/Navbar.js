@@ -39,16 +39,14 @@ const Navbar = () => {
   }, [])
 
   return (
-    <Transition in={setNavChange} timeout={500}>
+    <Transition in={navChange} timeout={500}>
       {state => (
         <nav
           state={state}
-          setNavChange={setNavChange}
           className={`nav-transition ${navColor} fixed w-full top-0 z-10 border-b ${navBorder}`}
         >
           <div
             state={state}
-            setNavChange={setNavChange}
             className={`nav-transition flex justify-between container items-center mx-auto px-8 ${navHeight}`}
           >
             <div className="flex items-center text-gray-400">
