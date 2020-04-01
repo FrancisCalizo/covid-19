@@ -23,3 +23,9 @@ input:checked ~ .toggle__dot {
 input:checked + svg {
   display: block;
 }
+
+.nav-transition {
+  transition: padding 500ms ease-in, opacity 100ms ease-in,
+    background-color 100ms ease-in 300ms, color 100ms ease-in 300ms,
+    border 100ms ease-in 300ms;
+}
