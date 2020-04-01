@@ -4,6 +4,7 @@ import CovidProvider from "../context/CovidState"
 import Navbar from "../components/Navbar"
 import GlobalTotals from "../components/GlobalTotals"
 import Global from "../components/layouts/Global"
+import Footer from "../components/Footer.js"
 
 const index = () => {
   return (
@@ -14,6 +15,7 @@ const index = () => {
         <div className="w-full border-b-2 border-gray-300 my-6"></div>
       </div>
       <Global />
+      <Footer />
     </CovidProvider>
   )
 }
