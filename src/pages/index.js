@@ -5,6 +5,7 @@ import Navbar from "../components/Navbar"
 import UnderNav from "../components/layouts/UnderNav"
 import GlobalTotals from "../components/GlobalTotals"
 import Global from "../components/layouts/Global"
+import Sources from "../components/Sources"
 import Footer from "../components/Footer.js"
 
 const index = () => {
@@ -17,6 +18,7 @@ const index = () => {
           <div className="w-full border-b-2 border-gray-300 my-6"></div>
         </div>
         <Global />
+        <Sources />
         <Footer />
       </UnderNav>
     </CovidProvider>

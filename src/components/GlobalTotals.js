@@ -8,8 +8,10 @@ const GlobalTotals = () => {
   const { globalTotals, date } = covidContext
 
   return (
-    <div className="bg-gray-800 py-2">
-      <h1 className="text-white text-center text-3xl">Global Statistics</h1>
+    <div className="bg-gray-800 pt-6 sm:pt-2 pb-2">
+      <h1 className="text-white text-center text-2xl sm:text-3xl">
+        Global Statistics
+      </h1>
       <div className="flex justify-center flex-wrap md:flex-no-wrap container mx-auto">
         <div className="w-4/5 sm:w-2/5 md:w-1/5 mx-2">
           <div className="border border-gray-600 rounded bg-gray-700 shadow-2xl my-2 py-3 px-4">
