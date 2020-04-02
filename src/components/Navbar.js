@@ -62,9 +62,7 @@ const Navbar = () => {
               </h1>
             </div>
             <div>
-              <div className="inline-block relative w-48">
-                <Toggle />
-              </div>
+              <Toggle />
             </div>
           </div>
         </nav>
