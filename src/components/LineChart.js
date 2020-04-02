@@ -118,7 +118,7 @@ const LineChart = () => {
             fontColor: "#fff",
           },
         }}
-        height={250}
+        height={230}
         options={{
           // aspectRatio: 0.5,
           maintainAspectRatio: true,
