@@ -120,7 +120,7 @@ const LineChart = () => {
         }}
         height={230}
         options={{
-          // aspectRatio: 0.5,
+          aspectRatio: 0.5,
           maintainAspectRatio: true,
           responsive: true,
           scales: {

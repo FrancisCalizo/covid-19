@@ -1,18 +1,22 @@
 ### http://thecovidreport.netlify.com
 
 # Covid-19 Report
-A daily graphical report on coronavirus (COVID-19) cases, both globally and for states within the US.  This websites data includes:
-* Confirmed cases, deaths, and recoveries globally or by country
-* Option to see the above information, but only for US States
-* Graphs and Charts to represent the above data visually
+
+A daily graphical report on coronavirus (COVID-19) cases, both globally and for states within the US. This websites data includes:
+
+- Confirmed cases, deaths, and recoveries globally or by country
+- Option to see the above information, but only for US States
+- Graphs and Charts to represent the above data visually
 
 ## Technologies
-* Gatsby.js (React.js)
-* Chart.js
-* Tailwindscss
-* Netlify
-* [COVID API](https://github.com/javieraviles/covidAPI)
-* [COVID-19 APIT](https://github.com/pomber/covid19)
+
+- Gatsby.js (React.js)
+- Chart.js
+- Tailwindscss
+- Netlify
+- [COVID API](https://github.com/javieraviles/covidAPI)
+- [COVID-19 API](https://github.com/pomber/covid19)
+
 
 ## Helpful Articles Along the Way
 

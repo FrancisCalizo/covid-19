@@ -5,7 +5,13 @@ import CovidContext from "../context/covidContext"
 
 const BarChart = () => {
   const covidContext = useContext(CovidContext)
-  const { countryDataToday, currentCountry } = covidContext
+  const {
+    countryDataToday,
+    currentCountry,
+    isUsOnly,
+    currentState,
+    stateData,
+  } = covidContext
 
   const [date, setDate] = useState(new Date())
   const [confirmed, setConfirmed] = useState(0)
@@ -14,15 +20,42 @@ const BarChart = () => {
 
   useEffect(() => {
     setDate(countryDataToday.date)
-    setConfirmed(countryDataToday.confirmed)
-    setDeaths(countryDataToday.deaths)
-    setRecovered(countryDataToday.recovered)
-  }, [countryDataToday, currentCountry])
+
+    if (isUsOnly) {
+      if (stateData.length > 0) {
+        setConfirmed(
+          stateData
+            .filter(data => data.province === currentState)
+            .reduce((acc, cur) => {
+              return acc + cur.confirmed
+            }, 0)
+        )
+        setDeaths(
+          stateData
+            .filter(data => data.province === currentState)
+            .reduce((acc, cur) => {
+              return acc + cur.deaths
+            }, 0)
+        )
+        setRecovered(
+          stateData
+            .filter(data => data.province === currentState)
+            .reduce((acc, cur) => {
+              return acc + cur.recovered
+            }, 0)
+        )
+      }
+    } else {
+      setConfirmed(countryDataToday.confirmed)
+      setDeaths(countryDataToday.deaths)
+      setRecovered(countryDataToday.recovered)
+    }
+  }, [countryDataToday, currentCountry, currentState, stateData, isUsOnly])
 
   return (
     <div className="lg:w-3/4 xl:w-2/3 mx-auto bg-gray-700 rounded my-10 border-gray-600 border shadow-2xl">
       <h2 className="text-xl text-gray-200 pt-4 font-bold text-center">
-        Today's Statistics for {currentCountry}
+        Today's Statistics for {isUsOnly ? currentState : currentCountry}
       </h2>
       <Bar
         data={{
@@ -86,7 +119,7 @@ const BarChart = () => {
           },
           animation: {
             duration: 500,
-            easing: "easeInSine",
+            // easing: "easeInSine",
             onComplete: function() {
               let chartInstance = this.chart,
                 ctx = chartInstance.ctx
@@ -110,6 +143,9 @@ const BarChart = () => {
                     )
                   } else {
                     let data = 0
+                    if (isUsOnly && index === 2) {
+                      data = "Unavailable"
+                    }
                     ctx.fillText(data, bar._model.x, bar._model.y)
                   }
                 })
@@ -136,6 +172,9 @@ const BarChart = () => {
                     )
                   } else {
                     let data = 0
+                    if (isUsOnly && index === 2) {
+                      data = "Unavailable"
+                    }
                     ctx.fillText(data, bar._model.x, bar._model.y)
                   }
                 })
