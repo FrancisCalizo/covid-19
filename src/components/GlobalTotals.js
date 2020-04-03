@@ -11,7 +11,6 @@ const GlobalTotals = () => {
   const [isLoaded, setIsLoaded] = useState(false)
 
   useEffect(() => {
-    console.log(isLoaded)
     setIsLoaded(true)
   }, [])
 

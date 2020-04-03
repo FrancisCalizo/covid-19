@@ -1,15 +1,24 @@
 import React, { useState, useEffect } from "react"
+
 import CovidContext from "./covidContext"
+import { stateNames } from "./stateNames"
 
 export default ({ children }) => {
   const [date] = useState(new Date())
+  const [isUsOnly, setIsUsOnly] = useState(false)
+
+  const [globalTotals, setGlobalTotals] = useState({})
   const [countryData, setCountryData] = useState({})
   const [countryDataToday, setCountryDataToday] = useState({})
   const [countries, setCountries] = useState([])
   const [currentCountry, setCurrentCountry] = useState("Afghanistan")
-  const [globalTotals, setGlobalTotals] = useState({})
-  const [isUsOnly, setIsUsOnly] = useState(false)
 
+  const [usaTotals, setUsaTotales] = useState([])
+  const [stateData, setStateData] = useState([])
+  const [states] = useState(stateNames)
+  const [currentState, setCurrentState] = useState("Alabama")
+
+  // Initial State To Be Loaded
   useEffect(() => {
     // Country Data
     fetch("https://pomber.github.io/covid19/timeseries.json")
@@ -29,11 +38,24 @@ export default ({ children }) => {
       .then(data => setCountries(Object.keys(data)))
       .catch(err => console.error(err))
 
+    // USA Totals
+    fetch("https://covid-193.p.rapidapi.com/statistics?country=USA", {
+      method: "GET",
+      headers: {
+        "x-rapidapi-host": "covid-193.p.rapidapi.com",
+        "x-rapidapi-key": "db1c0acdacmsh2be8155d9a6a22bp1cb848jsn48cdb1c2b494",
+      },
+    })
+      .then(response => response.json())
+      .then(data => setUsaTotales(data.response[0]))
+      .catch(err => {
+        console.error(err)
+      })
+
     // USA Statistics
     fetch(
       "https://covid-19-coronavirus-statistics.p.rapidapi.com/v1/stats?country=US",
       {
-        method: "GET",
         headers: {
           "x-rapidapi-host": "covid-19-coronavirus-statistics.p.rapidapi.com",
           "x-rapidapi-key":
@@ -42,12 +64,12 @@ export default ({ children }) => {
       }
     )
       .then(response => response.json())
-      .then(data => null)
+      .then(data => setStateData(data.data.covid19Stats))
       .catch(err => console.error(err))
   }, [])
 
+  // Current Country Data For Today Only
   useEffect(() => {
-    // Current Country Data For Today Only
     fetch("https://pomber.github.io/covid19/timeseries.json")
       .then(response => response.json())
       .then(data =>
@@ -69,6 +91,10 @@ export default ({ children }) => {
         currentCountry,
         setCurrentCountry,
         countryDataToday,
+        stateData,
+        states,
+        currentState,
+        usaTotals,
       }}
     >
       {children}
