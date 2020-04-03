@@ -8,7 +8,7 @@ import BarChart from "../BarChart"
 const Global = () => {
   const covidContext = useContext(CovidContext)
 
-  const { countries, setCurrentCountry } = covidContext
+  const { countries, setCurrentCountry, isUsOnly } = covidContext
 
   const [isLoaded, setIsLoaded] = useState(false)
 
@@ -30,7 +30,7 @@ const Global = () => {
             } totals-transition container my-8 mx-auto px-8 bg-gray-800`}
           >
             <h1 className="text-3xl text-center text-white">
-              Statistics By Country
+              Statistics By {isUsOnly ? "State" : "Country"}
             </h1>
             <select
               className="h-12 mb-4 mt-3 text-center text-xl block mx-auto w-64 text-gray-300 bg-gray-700 border border-gray-800 hover:border-blue-700 rounded

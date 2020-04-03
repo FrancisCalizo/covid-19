@@ -94,6 +94,7 @@ export default ({ children }) => {
         stateData,
         states,
         currentState,
+        setCurrentState,
         usaTotals,
       }}
     >

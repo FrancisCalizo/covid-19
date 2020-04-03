@@ -6,7 +6,7 @@ import CovidContext from "../context/covidContext"
 
 const GlobalTotals = () => {
   const covidContext = useContext(CovidContext)
-  const { globalTotals, date } = covidContext
+  const { globalTotals, usaTotals, date, isUsOnly } = covidContext
 
   const [isLoaded, setIsLoaded] = useState(false)
 
@@ -19,7 +19,7 @@ const GlobalTotals = () => {
       {state => (
         <div className="bg-gray-800 pt-6 sm:pt-2 pb-2">
           <h1 className="text-white text-center text-2xl sm:text-3xl">
-            Global Statistics
+            {isUsOnly ? "USA Statistics" : "Global Statistics"}
           </h1>
           <div
             className={`${
@@ -38,7 +38,9 @@ const GlobalTotals = () => {
                   ) : (
                     <CountUp
                       separator=","
-                      end={globalTotals.cases}
+                      end={
+                        isUsOnly ? usaTotals.cases.total : globalTotals.cases
+                      }
                       delay={0.15}
                     />
                   )}
@@ -56,7 +58,9 @@ const GlobalTotals = () => {
                   ) : (
                     <CountUp
                       separator=","
-                      end={globalTotals.deaths}
+                      end={
+                        isUsOnly ? usaTotals.deaths.total : globalTotals.deaths
+                      }
                       delay={0.15}
                     />
                   )}
@@ -74,7 +78,11 @@ const GlobalTotals = () => {
                   ) : (
                     <CountUp
                       separator=","
-                      end={globalTotals.recovered}
+                      end={
+                        isUsOnly
+                          ? usaTotals.cases.recovered
+                          : globalTotals.recovered
+                      }
                       delay={0.15}
                     />
                   )}

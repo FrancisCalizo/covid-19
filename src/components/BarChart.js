@@ -86,7 +86,7 @@ const BarChart = () => {
           },
           animation: {
             duration: 500,
-            easing: "easeInSine",
+            // easing: "easeInSine",
             onComplete: function() {
               let chartInstance = this.chart,
                 ctx = chartInstance.ctx
