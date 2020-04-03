@@ -15,7 +15,8 @@ A daily graphical report on coronavirus (COVID-19) cases, both globally and for 
 - Tailwindscss
 - Netlify
 - [COVID API](https://github.com/javieraviles/covidAPI)
-- [COVID-19 APIT](https://github.com/pomber/covid19)
+- [COVID-19 API](https://github.com/pomber/covid19)
+
 
 ## Helpful Articles Along the Way
 

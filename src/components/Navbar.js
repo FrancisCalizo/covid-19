@@ -47,9 +47,9 @@ const Navbar = () => {
         >
           <div
             state={state}
-            className={`nav-transition flex justify-between container items-center mx-auto px-8 ${navHeight}`}
+            className={`nav-transition flex flex-wrap mobile:flex-no-wrap justify-center mobile:justify-between container items-center mx-auto px-8 ${navHeight}`}
           >
-            <div className="flex items-center text-gray-400">
+            <div className="flex items-center text-gray-400 mb-2 mobile:my-0 w-full mobile:w-auto inline-block">
               <Img
                 fixed={data.sickImage.childImageSharp.fixed}
                 alt={data.sickImage.childImageSharp.fixed.originalName}

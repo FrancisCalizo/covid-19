@@ -1,13 +1,22 @@
 module.exports = {
   siteMetadata: {
     title: `By The Numbers | Covid-19`,
-    siteUrl: `https://localhost:8000`,
-    description: `CUHRONA VIRUS`,
+    siteUrl: `http://thecovidreport.netlify.com`,
+    description: `Covid-19 Daily Report`,
     author: "Francis Calizo",
   },
   plugins: [
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
+    {
+      resolve: `gatsby-plugin-manifest`,
+      options: {
+        name: `The Covid-19 Report`,
+        short_name: `Covid-19 Report`,
+        start_url: `/`,
+        icon: `src/images/mask.png`,
+      },
+    },
     {
       resolve: `gatsby-plugin-postcss`,
       options: {
