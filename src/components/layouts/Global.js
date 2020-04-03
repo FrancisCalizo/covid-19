@@ -10,9 +10,11 @@ const Global = () => {
 
   const {
     countries,
+    currentCountry,
     setCurrentCountry,
     isUsOnly,
     states,
+    currentState,
     setCurrentState,
   } = covidContext
 
@@ -53,6 +55,7 @@ const Global = () => {
               border border-gray-800 hover:border-blue-700 rounded
               shadow leading-tight focus:outline-none shadow-outline cursor-pointer"
               onChange={handleChange}
+              value={isUsOnly ? currentState : currentCountry}
             >
               {isUsOnly
                 ? states.map(state => (

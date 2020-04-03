@@ -50,7 +50,7 @@ const BarChart = () => {
       setDeaths(countryDataToday.deaths)
       setRecovered(countryDataToday.recovered)
     }
-  }, [countryDataToday, currentCountry, currentState, stateData])
+  }, [countryDataToday, currentCountry, currentState, stateData, isUsOnly])
 
   return (
     <div className="lg:w-3/4 xl:w-2/3 mx-auto bg-gray-700 rounded my-10 border-gray-600 border shadow-2xl">
