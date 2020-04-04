@@ -55,7 +55,7 @@ const BarChart = () => {
   return (
     <div className="lg:w-3/4 xl:w-2/3 mx-auto bg-gray-700 rounded my-10 border-gray-600 border shadow-2xl">
       <h2 className="text-xl text-gray-200 pt-4 font-bold text-center">
-        Today's Statistics for {isUsOnly ? currentState : currentCountry}
+        Statistics as of Today for {isUsOnly ? currentState : currentCountry}
       </h2>
       <Bar
         data={{
