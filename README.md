@@ -17,6 +17,16 @@ A daily graphical report on coronavirus (COVID-19) cases, both globally and for 
 - [COVID API](https://github.com/javieraviles/covidAPI)
 - [COVID-19 API](https://github.com/pomber/covid19)
 
+<br/>
+<img src="./src/images/screenshots/Covid2.png" width="100%">
+<br/>
+<br/>
+<img src="./src/images/screenshots/Covid1.png" width="100%">
+<br/>
+<br/>
+<img src="./src/images/screenshots/Covid3.png" width="100%">
+<br/>
+<br/>
 
 ## Helpful Articles Along the Way
 

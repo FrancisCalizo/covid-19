@@ -1,6 +1,6 @@
 module.exports = {
   siteMetadata: {
-    title: `By The Numbers | Covid-19`,
+    title: `Statistics | Covid-19`,
     siteUrl: `http://thecovidreport.netlify.com`,
     description: `Covid-19 Daily Report`,
     author: "Francis Calizo",

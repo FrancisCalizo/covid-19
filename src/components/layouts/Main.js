@@ -5,7 +5,7 @@ import CovidContext from "../../context/covidContext"
 import LineChart from "../LineChart"
 import BarChart from "../BarChart"
 
-const Global = () => {
+const Main = () => {
   const covidContext = useContext(CovidContext)
 
   const {
@@ -78,4 +78,4 @@ const Global = () => {
   )
 }
 
-export default Global
+export default Main
