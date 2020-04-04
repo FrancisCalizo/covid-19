@@ -1,4 +1,4 @@
-import React, { useContext, useState } from "react"
+import React, { useContext, useRef } from "react"
 
 import CovidContext from "../context/covidContext"
 
@@ -6,24 +6,41 @@ const Toggle = () => {
   const covidContext = useContext(CovidContext)
   const { isUsOnly, setIsUsOnly } = covidContext
 
+  const usaButton = useRef(null)
+  const globalButton = useRef(null)
+
+  const handleClick = e => {
+    if (e.target === usaButton.current) {
+      setIsUsOnly(true)
+    } else {
+      setIsUsOnly(false)
+    }
+  }
+
   return (
-    <div className="flex items-center">
-      <label htmlFor="toggle" className="flex items-center cursor-pointer ">
-        <div className="relative">
-          <input
-            id="toggle"
-            type="checkbox"
-            className="hidden"
-            checked={isUsOnly}
-            onChange={() => setIsUsOnly(!isUsOnly)}
-          />
-          <div className="flex justify-around items-center toggle__line w-24 h-8 bg-gray-700 rounded-full shadow-inner shadow-2xl">
-            <div className="text-sm text-gray-300">USA</div>
-            <div className="text-sm text-gray-300">Global</div>
-          </div>
-          <div className="toggle__dot absolute w-12 h-8 bg-white rounded-full shadow inset-y-0 left-0 border border-gray-700"></div>
-        </div>
-      </label>
+    <div className="flex">
+      <div
+        className={`px-3 md:px-4 py-1 border border-black rounded-l border border-teal-400 text-white ${
+          isUsOnly
+            ? "bg-teal-800 hover:bg-teal-900"
+            : "bg-gray-700 hover:bg-gray-800"
+        } cursor-pointer text-xs  md:text-base`}
+        onClick={handleClick}
+        ref={usaButton}
+      >
+        USA
+      </div>
+      <div
+        className={`px-2 md:px-3 py-1 border border-black rounded-r border border-teal-400 text-white ${
+          !isUsOnly
+            ? "bg-teal-800 hover:bg-teal-900"
+            : "bg-gray-700 hover:bg-gray-800"
+        } cursor-pointer text-xs  md:text-base`}
+        onClick={handleClick}
+        ref={globalButton}
+      >
+        Global
+      </div>
     </div>
   )
 }
