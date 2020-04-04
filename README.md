@@ -18,13 +18,13 @@ A daily graphical report on coronavirus (COVID-19) cases, both globally and for 
 - [COVID-19 API](https://github.com/pomber/covid19)
 
 <br/>
-<img src="./src/images/screenshots/top.png" width="100%">
+<img src="./src/images/top.png" width="100%">
 <br/>
 <br/>
-<img src="./src/images/screenshots/bottom.png" width="100%">
+<img src="./src/images/bottom.png" width="100%">
 <br/>
 <br/>
-<img src="./src/images/screenshots/usa.png" width="100%">
+<img src="./src/images/usa.png" width="100%">
 <br/>
 <br/>
 
