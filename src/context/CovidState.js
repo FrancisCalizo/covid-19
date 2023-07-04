@@ -27,10 +27,10 @@ export default ({ children }) => {
       .catch(err => console.error(err))
 
     // Global Data
-    fetch("https://coronavirus-19-api.herokuapp.com/all")
-      .then(response => response.json())
-      .then(data => setGlobalTotals(data))
-      .catch(err => console.error(err))
+    // fetch("https://coronavirus-19-api.herokuapp.com/all")
+    //   .then(response => response.json())
+    //   .then(data => setGlobalTotals(data))
+    //   .catch(err => console.error(err))
 
     // Countries
     fetch("https://pomber.github.io/covid19/timeseries.json")
@@ -43,7 +43,10 @@ export default ({ children }) => {
       method: "GET"
     })
       .then(response => response.json())
-      .then(data => setUsaTotals(data[0]))
+      .then(data => {
+        console.log(data)
+        return setUsaTotals(data[0])
+      })
       .catch(err => {
         console.error(err)
       })
