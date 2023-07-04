@@ -83,7 +83,7 @@ const GlobalTotals = () => {
                       separator=","
                       end={
                         isUsOnly
-                          ? usaTotals.cases.hospitalized 
+                          ? usaTotals.negative 
                           : globalTotals.recovered
                       }
                       delay={0.15}
