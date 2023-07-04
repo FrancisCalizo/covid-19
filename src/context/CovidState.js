@@ -43,7 +43,7 @@ export default ({ children }) => {
       method: "GET"
     })
       .then(response => response.json())
-      .then(data => setUsaTotals(data.response[0]))
+      .then(data => setUsaTotals(data[0]))
       .catch(err => {
         console.error(err)
       })
