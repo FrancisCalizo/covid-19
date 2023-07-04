@@ -39,7 +39,7 @@ const GlobalTotals = () => {
                     <CountUp
                       separator=","
                       end={
-                        isUsOnly ? usaTotals.cases.total : globalTotals.cases
+                        isUsOnly ? usaTotals.totalTestResults : globalTotals.cases
                       }
                       delay={0.15}
                     />
@@ -59,7 +59,7 @@ const GlobalTotals = () => {
                     <CountUp
                       separator=","
                       end={
-                        isUsOnly ? usaTotals.deaths.total : globalTotals.deaths
+                        isUsOnly ? usaTotals.death : globalTotals.deaths
                       }
                       delay={0.15}
                     />
@@ -80,7 +80,7 @@ const GlobalTotals = () => {
                       separator=","
                       end={
                         isUsOnly
-                          ? usaTotals.cases.recovered
+                          ? usaTotals.cases.hospitalized 
                           : globalTotals.recovered
                       }
                       delay={0.15}

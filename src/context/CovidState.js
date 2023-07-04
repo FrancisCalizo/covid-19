@@ -13,7 +13,7 @@ export default ({ children }) => {
   const [countries, setCountries] = useState([])
   const [currentCountry, setCurrentCountry] = useState("Afghanistan")
 
-  const [usaTotals, setUsaTotales] = useState([])
+  const [usaTotals, setUsaTotals] = useState([])
   const [stateData, setStateData] = useState([])
   const [states] = useState(stateNames)
   const [currentState, setCurrentState] = useState("Alabama")
@@ -39,18 +39,27 @@ export default ({ children }) => {
       .catch(err => console.error(err))
 
     // USA Totals
-    fetch("https://covid-193.p.rapidapi.com/statistics?country=USA", {
-      method: "GET",
-      headers: {
-        "x-rapidapi-host": "covid-193.p.rapidapi.com",
-        "x-rapidapi-key": "db1c0acdacmsh2be8155d9a6a22bp1cb848jsn48cdb1c2b494",
-      },
+    fetch("https://api.covidtracking.com/v1/us/current.json", {
+      method: "GET"
     })
       .then(response => response.json())
-      .then(data => setUsaTotales(data.response[0]))
+      .then(data => setUsaTotals(data.response[0]))
       .catch(err => {
         console.error(err)
       })
+    /** API is not working anymore */ 
+    // fetch("https://covid-193.p.rapidapi.com/statistics?country=USA", {
+    //   method: "GET",
+    //   headers: {
+    //     "x-rapidapi-host": "covid-193.p.rapidapi.com",
+    //     "x-rapidapi-key": "db1c0acdacmsh2be8155d9a6a22bp1cb848jsn48cdb1c2b494",
+    //   },
+    // })
+    //   .then(response => response.json())
+    //   .then(data => setUsaTotals(data.response[0]))
+    //   .catch(err => {
+    //     console.error(err)
+    //   })
 
     // USA Statistics
     fetch(
