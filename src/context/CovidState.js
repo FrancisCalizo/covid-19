@@ -26,11 +26,18 @@ export default ({ children }) => {
       .then(data => setCountryData(data))
       .catch(err => console.error(err))
 
+    /** API is not working anymore */ 
     // Global Data
     // fetch("https://coronavirus-19-api.herokuapp.com/all")
     //   .then(response => response.json())
     //   .then(data => setGlobalTotals(data))
     //   .catch(err => console.error(err))
+
+    // Global Data
+    fetch("https://corona.lmao.ninja/v2/all")
+      .then(response => response.json())
+      .then(data => setGlobalTotals(data))
+      .catch(err => console.error(err))
 
     // Countries
     fetch("https://pomber.github.io/covid19/timeseries.json")

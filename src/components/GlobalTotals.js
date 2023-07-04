@@ -15,6 +15,7 @@ const GlobalTotals = () => {
   }, [])
 
   console.log('usaTotals', usaTotals)
+  console.log('globalTotals', globalTotals)
 
   return (
     <Transition in={isLoaded} timeout={500}>
